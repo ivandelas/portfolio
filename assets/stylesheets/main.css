@@ -177,3 +177,28 @@ img {
 }
 
 /* projects main content END */
+
+/* articles section BEGINNING */
+
+.articles h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.articles {
+    padding-right: 30px;
+}
+
+.articles-list {
+    background: white;
+    padding: 20px;
+}
+
+.articles-list li {
+    margin-bottom: 10px;
+}
+
+.articles-list li:last-child {
+    margin-bottom: 0;
+}
