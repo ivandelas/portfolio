@@ -1,7 +1,7 @@
 # Santiago Rodríguez Portfolio
 
 This is my own protfolio to showcase my skills as a developer, you can use it as
-a template if you'll like, but please don't make your portfolio same as mine.
+a template if you want, but please don't make your portfolio same as mine.
 
 ## Setup
 
