@@ -709,3 +709,90 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9491)
 
 
+Started GET "/" for ::1 at 2020-04-14 18:29:21 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/_main.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 7897)
+
+
+Started GET "/" for ::1 at 2020-04-14 19:22:52 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered pages/_project.html.erb (Duration: 407.0ms | Allocations: 158664)
+  Rendered pages/_main.html.erb (Duration: 408.1ms | Allocations: 159016)
+  Rendered pages/home.html.erb within layouts/application (Duration: 410.2ms | Allocations: 159787)
+Completed 500 Internal Server Error in 423ms (ActiveRecord: 0.0ms | Allocations: 161865)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `title' for #<#<Class:0x000055d284c045e8>:0x000055d284c1dc28>):
+    1: <div class="ui raised segment">
+    2: 	<h3><%= title %></h3>
+    3:   <div class="ui small image">
+    4:     <%= image_tag img %>
+    5:   </div>
+  
+app/views/pages/_project.html.erb:2
+app/views/pages/_main.html.erb:4
+app/views/pages/home.html.erb:2
+Started GET "/" for ::1 at 2020-04-14 19:23:35 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered pages/_project.html.erb (Duration: 48.8ms | Allocations: 20421)
+  Rendered pages/_main.html.erb (Duration: 49.7ms | Allocations: 20762)
+  Rendered pages/home.html.erb within layouts/application (Duration: 51.3ms | Allocations: 21401)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.0ms | Allocations: 30627)
+
+
+Started GET "/" for ::1 at 2020-04-14 19:24:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered pages/_project.html.erb (Duration: 1.8ms | Allocations: 752)
+  Rendered pages/_main.html.erb (Duration: 2.7ms | Allocations: 1092)
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1726)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 10473)
+
+
+Started GET "/" for ::1 at 2020-04-14 19:24:56 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_project.html.erb (Duration: 1.6ms | Allocations: 752)
+  Rendered pages/_main.html.erb (Duration: 2.2ms | Allocations: 1093)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 10489)
+
+
+Started GET "/" for ::1 at 2020-04-14 19:25:28 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_project.html.erb (Duration: 2.2ms | Allocations: 774)
+  Rendered pages/_main.html.erb (Duration: 3.0ms | Allocations: 1114)
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 10489)
+
+
+Started GET "/" for ::1 at 2020-04-14 19:26:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered pages/_project.html.erb (Duration: 2.1ms | Allocations: 771)
+  Rendered pages/_main.html.erb (Duration: 2.9ms | Allocations: 1112)
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 10497)
+
+
