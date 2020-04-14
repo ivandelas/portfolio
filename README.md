@@ -1,12 +1,24 @@
-# Santiago Rodríguez Portfolio
+# README
 
-This is my own protfolio to showcase my skills as a developer, you can use it as
-a template if you want, but please don't make your portfolio same as mine.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Setup
+Things you may want to cover:
 
-Just clone this repository, for now is pure HTML & CSS, so you won't need to install anything special.
+* Ruby version
 
-## License
+* System dependencies
 
-This portfolio is licensed under the [MIT](https://github.com/santiago-rodrig/portfolio/blob/master/LICENSE) license.
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
