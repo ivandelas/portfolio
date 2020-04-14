@@ -498,3 +498,214 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9584)
 
 
+Started GET "/" for ::1 at 2020-04-14 17:24:16 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9897)
+
+
+Started GET "/" for ::1 at 2020-04-14 17:24:42 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 86)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 9905)
+
+
+Started GET "/" for ::1 at 2020-04-14 17:28:34 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 86)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9907)
+
+
+Started GET "/" for ::1 at 2020-04-14 17:30:23 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 86)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 9908)
+
+
+Started GET "/" for ::1 at 2020-04-14 17:30:43 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 9914)
+
+
+Started GET "/" for ::1 at 2020-04-14 17:30:51 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 9900)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:08:32 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 88)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 9934)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:08:42 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.0ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 85)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 9934)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:10:07 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/_main.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 988ms (Views: 987.9ms | ActiveRecord: 0.0ms | Allocations: 148094)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:16:42 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 9374)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:21:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered pages/_main.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1140ms (Views: 1139.2ms | ActiveRecord: 0.0ms | Allocations: 156067)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:22:08 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered pages/_main.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 9510)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:22:28 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered pages/_main.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 9499)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:23:45 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered pages/_main.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 9491)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:26:30 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9497)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:27:04 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 9511)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:27:25 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9516)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:28:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 9495)
+
+
+Started GET "/" for ::1 at 2020-04-14 18:28:33 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered pages/_main.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9491)
+
+
