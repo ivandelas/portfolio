@@ -316,3 +316,163 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 6424)
 
 
+Started GET "/" for ::1 at 2020-04-14 16:28:42 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 515)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms | Allocations: 6974)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: semantic-ui.
+        on line 16:1 of app/assets/stylesheets/application.css.scss
+>> @import "semantic-ui";
+
+   ^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.css.scss:16
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-04-14 16:29:07 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 515)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 6335)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: semantic-ui.
+        on line 16:1 of app/assets/stylesheets/application.css.scss
+>> @import "semantic-ui";
+
+   ^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.css.scss:16
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-04-14 16:30:14 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 515)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/srodrig/Desktop/rails/portfolio/public/packs
+[Webpacker] Hash: 93329fe21ca6c5628997
+Version: webpack 4.42.1
+Time: 4511ms
+Built at: 04/14/2020 4:30:20 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2d8382715b9721f7bf20.js   1.14 MiB  application  [emitted] [immutable]  application
+js/application-2d8382715b9721f7bf20.js.map   1.32 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2d8382715b9721f7bf20.js js/application-2d8382715b9721f7bf20.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 779 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 28 hidden modules
+
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 6804ms (Views: 6800.5ms | ActiveRecord: 0.0ms | Allocations: 176935)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:36:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.5ms | Allocations: 84)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 84)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 9266)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:37:20 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 84)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 9259)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:39:26 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9262)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:40:14 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 84)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 9244)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:41:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 9275)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:42:03 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 7688)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:45:23 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 84)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 9272)
+
+
+Started GET "/" for ::1 at 2020-04-14 16:48:54 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/_aside.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 84)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9302)
+
+
