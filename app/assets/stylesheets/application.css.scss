@@ -22,9 +22,32 @@
   font-weight: 400;
 }
 
+
 body {
   padding-top: 3rem;
   min-height: 100vh;
+
+  footer {
+    &.ui.padded.grid:not(.vertically):not(.horizontally) {
+      margin-top: 3rem !important;
+    }
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code a {
+  color: #000;
+  font-weight: bold;
+
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 p {
@@ -37,4 +60,10 @@ p {
 
 h1, h2, h3 {
   font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+}
+
+#footer-header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
