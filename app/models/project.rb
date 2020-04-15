@@ -6,6 +6,6 @@ class Project < ApplicationRecord
   validates :description, length: { minimum: 50, maximum: 200 }
   validates :site, format: { with: URI.regexp }
   validates :repo, format: { with: URI.regexp }
-  validates :img, format: { with: /\w+\.(gif|jpg|png)/ }
   scope :active_projects, -> { where(active: true) }
+  has_one_attached :demo_image
 end

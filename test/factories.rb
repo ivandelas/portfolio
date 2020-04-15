@@ -14,6 +14,5 @@ FactoryBot.define do
     description { 'smap' * 13 }
     site { generate(:site) }
     repo { generate(:repo) }
-    img { generate(:img) }
   end
 end

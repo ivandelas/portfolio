@@ -37,11 +37,6 @@ class ProjectTest < ActiveSupport::TestCase
     assert project.invalid?
   end
 
-  def test_img_must_be_a_valid_image_file_name
-    project = build(:project, img: 'everything_is_fine.exe')
-    assert project.invalid?
-  end
-
   def test_active_projects_scope_gets_active_projects
     project1 = create(:project)
     project1.toggle!(:active)
