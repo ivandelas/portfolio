@@ -1,5 +1,9 @@
 # project factory
 FactoryBot.define do
+  factory :user do
+    
+  end
+
   sequence(:title) { |n| "project title #{n}" }
   sequence(:site) { |n| "https://site-url-#{n}.herokuapp.com" }
   sequence(:repo) { |n| "https://github.com/user/repo#{n}" }
