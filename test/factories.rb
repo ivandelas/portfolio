@@ -7,7 +7,7 @@ FactoryBot.define do
 
   factory :project do
     title { generate(:title) }
-    description { 'some random description here just to test' }
+    description { 'smap' * 13 }
     site { generate(:site) }
     repo { generate(:repo) }
     img { generate(:img) }

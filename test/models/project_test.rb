@@ -16,4 +16,19 @@ class ProjectTest < ActiveSupport::TestCase
     project2 = build(:project, title: project1.title)
     assert project2.invalid?
   end
+
+  def test_description_must_be_at_least_50_characters_long
+    project = build(:project, description: ('a' * 49))
+    assert project.invalid?
+  end
+
+  def test_description_must_be_at_most_200_characters_long
+    project = build(:project, description: ('a' * 201))
+    assert project.invalid?
+  end
+
+  def test_site_must_be_a_url
+    project = build(:project, site: 'hey there')
+    assert project.invalid?
+  end
 end
