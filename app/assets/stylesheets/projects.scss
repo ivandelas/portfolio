@@ -3,8 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 #projects-box {
-  max-height: 100vh;
+  max-height: 85vh;
   overflow: auto;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
 }
 
 #lead-paragraph {
