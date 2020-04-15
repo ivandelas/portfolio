@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_170428) do
+ActiveRecord::Schema.define(version: 2020_04_15_224328) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,16 @@ ActiveRecord::Schema.define(version: 2020_04_15_170428) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "owners", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "github"
+    t.string "linkedin"
+    t.text "about"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -41,6 +51,8 @@ ActiveRecord::Schema.define(version: 2020_04_15_170428) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "active", default: false
+    t.integer "owner_id"
+    t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_04_15_170428) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "projects", "owners"
 end

@@ -1,7 +1,11 @@
 # project factory
 FactoryBot.define do
-  factory :user do
-    
+  factory :owner do
+    name { "MyString" }
+    email { "MyString" }
+    github { "MyString" }
+    linkedin { "MyString" }
+    about { "MyText" }
   end
 
   sequence(:title) { |n| "project title #{n}" }
