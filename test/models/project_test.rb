@@ -6,8 +6,8 @@ class ProjectTest < ActiveSupport::TestCase
     assert project.invalid?
   end
 
-  def test_title_must_be_at_most_100_characters_long
-    project = build(:project, title: ('a' * 101))
+  def test_title_must_be_at_most_150_characters_long
+    project = build(:project, title: ('a' * 151))
     assert project.invalid?
   end
 
@@ -22,8 +22,8 @@ class ProjectTest < ActiveSupport::TestCase
     assert project.invalid?
   end
 
-  def test_description_must_be_at_most_200_characters_long
-    project = build(:project, description: ('a' * 201))
+  def test_description_must_be_at_most_300_characters_long
+    project = build(:project, description: ('a' * 301))
     assert project.invalid?
   end
 
