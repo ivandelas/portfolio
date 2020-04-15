@@ -877,3 +877,75 @@ FOREIGN KEY ("blob_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-04-15 13:38:20 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered projects/_main.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 879)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1369ms (Views: 1363.7ms | ActiveRecord: 0.0ms | Allocations: 190469)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:39:02 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered projects/_main.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1232ms (Views: 1231.5ms | ActiveRecord: 0.0ms | Allocations: 164277)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:42:01 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered projects/_main.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 9859)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:45:24 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered projects/_main.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1182ms (Views: 1181.7ms | ActiveRecord: 0.0ms | Allocations: 165855)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:46:39 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered projects/_main.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1128ms (Views: 1127.2ms | ActiveRecord: 0.0ms | Allocations: 165426)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:46:46 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered projects/_main.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1079ms (Views: 1078.7ms | ActiveRecord: 0.0ms | Allocations: 164221)
+
+
+Started GET "/" for ::1 at 2020-04-15 13:47:10 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/_aside.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered projects/_main.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8176)
+
+
