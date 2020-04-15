@@ -14,5 +14,13 @@ FactoryBot.define do
     description { 'smap' * 13 }
     site { generate(:site) }
     repo { generate(:repo) }
+
+    after(:build, :create) do |user|
+      user.demo_image.attach(
+        io: File.open('app/assets/images/placeholder.jpg'),
+        filename: 'placeholder.jpg',
+        content_type: 'image/jpeg'
+      )
+    end
   end
 end
