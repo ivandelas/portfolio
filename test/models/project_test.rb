@@ -31,4 +31,14 @@ class ProjectTest < ActiveSupport::TestCase
     project = build(:project, site: 'hey there')
     assert project.invalid?
   end
+
+  def test_repo_must_be_a_url
+    project = build(:project, repo: 'hey, how is it going?')
+    assert project.invalid?
+  end
+
+  def test_img_must_be_a_valid_image_file_name
+    project = build(:project, img: 'everything_is_fine.exe')
+    assert project.invalid?
+  end
 end
