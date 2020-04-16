@@ -8,19 +8,19 @@
   <div class="item">
     <i class="mail icon"></i>
     <div class="content">
-      <a href="mailto:santo1996.29@gmail.com" target="_blank">santo1996.29@gmail.com</a>
+      <%= link_to @owner.email, "mailto:#{@owner.email}", target: '_blank' %>
     </div>
   </div>
   <div class="item">
     <i class="linkify icon"></i>
     <div class="content">
-      <a href="https://github.com/santiago-rodrig" target="_blank">github profile</a>
+      <%= link_to 'github profile', @owner.github, target: '_blank' %>
     </div>
   </div>
   <div class="item">
     <i class="linkify icon"></i>
     <div class="content">
-      <a href="https://www.linkedin.com/in/santiago-andres-rodriguez-marquez/" target="_blank">linkedin profile</a>
+      <%= link_to 'linkedin profile', @owner.linkedin, target: '_blank' %>
     </div>
   </div>
 </div>

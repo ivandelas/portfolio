@@ -9,9 +9,18 @@
 require 'faker'
 
 Project.delete_all
+Owner.delete_all
+
+owner = Owner.create(
+  name: Faker::Name.name,
+  email: Faker::Internet.email,
+  about: Faker::Lorem.paragraph_by_chars(number: 200),
+  github: Faker::Internet.url(host: 'github.com'),
+  linkedin: Faker::Internet.url(host: 'www.linkedin.com'),
+)
 
 10.times do
-  project = Project.new(
+  project = owner.projects.build(
     title: Faker::ChuckNorris.unique.fact,
     description: Faker::Lorem.unique.paragraph_by_chars(number: 256),
     repo: Faker::Internet.unique.url(host: 'github.com'),
@@ -26,6 +35,7 @@ Project.delete_all
 
   project.toggle(:active)
   project.save
+
   if project.valid?
     puts 'PROJECT SAVED'
   else
