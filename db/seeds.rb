@@ -24,6 +24,12 @@ owner = Owner.create(
   linkedin: Faker::Internet.url(
     host: 'www.linkedin.com/in', scheme: 'https'
   ).sub(/\.\w+\z/, ''),
+
+  location: [
+    Faker::Address.city,
+    Faker::Address.state,
+    Faker::Address.country,
+  ].join(', ')
 )
 
 if owner.invalid?
