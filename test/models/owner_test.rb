@@ -86,4 +86,16 @@ class OwnerTest < ActiveSupport::TestCase
       _(invalid_owner.errors).must_include :about
     end
   end
+
+  describe 'creating owners' do
+    it 'must be only one owner' do
+      valid_owner.save
+      _(Owner.count).must_equal 1
+      owner = build(:owner, name: 'Jen Smith')
+      owner.save
+      _(Owner.count).must_equal 1
+      _(owner).must_be :invalid?
+      _(owner.errors[:base]).must_include 'Only one owner is allowed'
+    end
+  end
 end
