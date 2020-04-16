@@ -5,6 +5,11 @@ class OwnerTest < ActiveSupport::TestCase
   let(:valid_owner) { build(:owner) }
 
   describe 'name' do
+    it 'must be standard' do
+      _(valid_owner.name).must_equal 'John Doe'
+      _(valid_owner).must_be :valid?
+    end
+
     it 'must be present' do
       _(invalid_owner.name).must_equal ''
       _(invalid_owner).must_be :invalid?
@@ -39,6 +44,16 @@ class OwnerTest < ActiveSupport::TestCase
       invalid_owner.name = 'joe doe'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :name
+    end
+  end
+
+  describe 'email' do
+    it 'must be a standard valid email' do
+      _(valid_owner.email).must_equal 'john.doe@example.org'
+      _(valid_owner).must_be :valid?
+      _(invalid_owner.email).must_equal 'john.doe#hey'
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :email
     end
   end
 end
