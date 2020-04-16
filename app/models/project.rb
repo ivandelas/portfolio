@@ -9,7 +9,7 @@ class Project < ApplicationRecord
 
   validates :description, length: { minimum: 50, maximum: 300 }
   validates :site, :repo, format: { with: URI.regexp }
-  validates :repo, format: { with: /\A.*\/[A-Za-z\-]+\/[a-z\-\.]+\z/ }
+  validates :repo, format: { with: /\A.*\/[A-Za-z\-]+\/[a-z\-\._]+\z/ }
 
   scope :active_projects, -> { where(active: true) }
 
