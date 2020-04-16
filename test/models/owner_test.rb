@@ -113,4 +113,15 @@ class OwnerTest < ActiveSupport::TestCase
       _(owner.errors[:base]).must_include 'Only one owner is allowed'
     end
   end
+
+  describe 'location' do
+    it 'must be a city followed by a country' do
+      _(invalid_owner.location).must_equal(
+        'My house, next to the gas station, grooves street'
+      )
+
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :location
+    end
+  end
 end

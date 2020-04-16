@@ -8,7 +8,9 @@
 
 require 'faker'
 
-Owner.delete_all
+Owner.all.each do |owner|
+  owner.destroy
+end
 
 owner = Owner.create(
   name: Faker::Name.first_name + ' ' + Faker::Name.last_name,
@@ -27,34 +29,36 @@ owner = Owner.create(
 if owner.invalid?
   p owner.errors.messages
   p owner
-end
+else
+  10.times do
+    project = owner.projects.build(
+      title: Faker::ChuckNorris.unique.fact,
+      description: Faker::Lorem.unique.paragraph_by_chars(number: 256),
 
-10.times do
-  project = owner.projects.build(
-    title: Faker::ChuckNorris.unique.fact,
-    description: Faker::Lorem.unique.paragraph_by_chars(number: 256),
+      repo: Faker::Internet.unique.url(
+        host: 'github.com/santiago-rodrig', scheme: 'https'
+      ).sub(/\.\w+\z/, ''),
 
-    repo: Faker::Internet.unique.url(
-      host: 'github.com/santiago-rodrig', scheme: 'https'
-    ).sub(/\.\w+\z/, ''),
+      site: Faker::Internet.unique.url(host: 'example.tech')
+    )
 
-    site: Faker::Internet.unique.url(host: 'example.tech')
-  )
+    project.demo_image.attach(
+      io: File.open(Rails.root.join('app', 'assets', 'images', 'placeholder.jpg')),
+      filename: 'placeholder.jpg',
+      content_type: 'image/jpeg'
+    )
 
-  project.demo_image.attach(
-    io: File.open(Rails.root.join('app', 'assets', 'images', 'placeholder.jpg')),
-    filename: 'placeholder.jpg',
-    content_type: 'image/jpeg'
-  )
+    project.toggle(:active)
+    project.save
 
-  project.toggle(:active)
-  project.save
-
-  if project.valid?
-    puts 'PROJECT SAVED'
-  else
-    puts 'PROJECT NOT SAVED' if project.invalid?
-    p project.errors.full_messages
-    puts project.repo
+    if project.valid?
+      puts 'PROJECT SAVED'
+    else
+      puts 'PROJECT NOT SAVED' if project.invalid?
+      p project.errors.full_messages
+      puts project.repo
+    end
   end
 end
+
+

@@ -24,6 +24,18 @@ FactoryBot.define do
     end
 
     about { valid ? Faker::Lorem.paragraph_by_chars(number: 100) : ('a' * 99) }
+
+    location do
+      if valid
+        [
+          Faker::Address.city,
+          Faker::Address.state,
+          Faker::Address.country
+        ].join(', ')
+      else
+        'My house, next to the gas station, grooves street'
+      end
+    end
   end
 
   sequence(:title) { |n| "project title #{n}" }
