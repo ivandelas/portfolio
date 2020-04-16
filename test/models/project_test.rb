@@ -73,28 +73,6 @@ class ProjectTest < ActiveSupport::TestCase
     assert project.invalid?
   end
 
-  def test_repo_and_site_must_be_existing_uris
-    project = @owner.projects.build(
-      attributes_for(
-        :project,
-        repo: 'https://github.com/mrnadaara/stfu.swift',
-        site: 'https://something-here-srodrig.herokuapp.com'
-      )
-    )
-
-    assert project.invalid?
-
-    project = @owner.projects.build(
-      attributes_for(
-        :project,
-        repo: 'https://github.com/santiago-rodrig/facebug',
-        site: 'https://facebug-srodrig.herokuapp.com'
-      )
-    )
-
-    assert project.valid?
-  end
-
   def test_active_projects_scope_gets_active_projects
     project1 = @owner.projects.create(
       attributes_for(:project)

@@ -59,9 +59,15 @@ class OwnerTest < ActiveSupport::TestCase
 
   describe 'github profile link' do
     it 'must be a standard valid url' do
-      _(valid_owner.github).must_equal 'https://github.com/john-doe'
+      _(valid_owner.github).must_equal 'https://github.com/santiago-rodrig'
       _(valid_owner).must_be :valid?
       _(invalid_owner.github).must_equal 'google-net_great 32'
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :github
+    end
+
+    it 'must be a typical github profile' do
+      invalid_owner.github = 'https://github.com/santiago-rodrig/facebug'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :github
     end
@@ -69,9 +75,18 @@ class OwnerTest < ActiveSupport::TestCase
 
   describe 'linkedin profile link' do
     it 'must be a standard valid url' do
-      _(valid_owner.linkedin).must_equal 'https://www.linkedin.com/in/john-doe'
+      _(valid_owner.linkedin).must_equal(
+        'https://www.linkedin.com/in/santiago-andres-rodriguez-marquez'
+      )
+
       _(valid_owner).must_be :valid?
       _(invalid_owner.linkedin).must_equal 'nice_thing#23@ex'
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :linkedin
+    end
+
+    it 'must be a typical linkedin profile' do
+      invalid_owner.linkedin = 'https://www.linkedin.com/in/123123g__.rf'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :linkedin
     end
