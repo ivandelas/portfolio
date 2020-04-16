@@ -1,11 +1,16 @@
-# project factory
+require 'faker'
+
 FactoryBot.define do
   factory :owner do
-    name { "MyString" }
-    email { "MyString" }
-    github { "MyString" }
-    linkedin { "MyString" }
-    about { "MyText" }
+    transient do
+      valid { true }
+    end
+
+    name { valid ? 'John Doe' : '' }
+    email { valid ? 'john.doe@example.org' : 'john.doe#hey' }
+    github { valid ? 'github.com/john-doe' : 'google-net_great 32' }
+    linkedin { valid ? 'www.linkedin.com/in/john-doe' : 'nice_thing#23@ex' }
+    about { valid ? Faker::Lorem.paragraph_by_chars(number: 100) : ('a' * 99) }
   end
 
   sequence(:title) { |n| "project title #{n}" }
