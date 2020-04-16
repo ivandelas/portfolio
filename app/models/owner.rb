@@ -3,7 +3,7 @@ require 'net/http'
 
 class OnlyOneValidation < ActiveModel::Validator
   def validate(record)
-    if record.class.count > 1
+    if record.class.count == 1 && record.new_record?
       record.errors[:base] << 'Only one owner is allowed'
     end
   end
@@ -12,7 +12,7 @@ end
 class Owner < ApplicationRecord
   has_many :projects, dependent: :destroy
 
-  NAME_REGEX = /\A[A-Z][a-z]{2,}\s[A-Z][a-z]{2,}\z/
+  NAME_REGEX = /\A[A-Z][a-z]{1,}\s[A-Z][a-z']{2,}\z/
   GITHUB_PROFILE_REGEX = /\Ahttps?:\/\/github\.com\/[A-Za-z\-_]+[^\-_]\z/
 
   LINKEDIN_PROFILE_REGEX = /
