@@ -16,17 +16,11 @@ class OwnerTest < ActiveSupport::TestCase
       _(invalid_owner.errors).must_include :name
     end
 
-    it 'must have two words of at least 3 characters' do
+    it 'must have two words' do
       invalid_owner.name = 'Jen'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :name
       invalid_owner.name = 'Jo Aj'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'Joe Do'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'Jo Doe'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :name
     end
@@ -104,6 +98,10 @@ class OwnerTest < ActiveSupport::TestCase
 
   describe 'creating owners' do
     it 'must be only one owner' do
+      Owner.all.each do |owner|
+        owner.destroy
+      end
+
       valid_owner.save
       _(Owner.count).must_equal 1
       owner = build(:owner, name: 'Jen Smith')
@@ -115,9 +113,9 @@ class OwnerTest < ActiveSupport::TestCase
   end
 
   describe 'location' do
-    it 'must be a city followed by a country' do
+    it 'must be a city followed by a state, followed by a country' do
       _(invalid_owner.location).must_equal(
-        'My house, next to the gas station, grooves street'
+        'My house next to the gas station grooves street come now!'
       )
 
       _(invalid_owner).must_be :invalid?

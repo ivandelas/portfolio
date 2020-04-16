@@ -15,6 +15,13 @@ class Owner < ApplicationRecord
   NAME_REGEX = /\A[A-Z][a-z]{1,}\s[A-Z][a-z']{2,}\z/
   GITHUB_PROFILE_REGEX = /\Ahttps?:\/\/github\.com\/[A-Za-z\-_]+[^\-_]\z/
 
+  LOCATION_REGEX = /
+    \A
+    ((([\(A-Z][a-z\.\)]+|[\(\)a-z']+),?\s)*[A-Z][a-z']+,\s){2}
+    (([\(A-Z][a-z\.\)]+|[\(\)a-z']+),?\s)*[A-Z][a-z']+
+    \z
+  /x
+
   LINKEDIN_PROFILE_REGEX = /
     \Ahttps?:\/\/www\.linkedin\.com\/in\/[a-z0-9\-]+[^\-]\z
   /x
@@ -25,5 +32,6 @@ class Owner < ApplicationRecord
   validates :github, format: { with: GITHUB_PROFILE_REGEX }
   validates :linkedin, format: { with: LINKEDIN_PROFILE_REGEX }
   validates :about, length: { minimum: 100 }
+  validates :location, format: { with: LOCATION_REGEX }
   validates_with OnlyOneValidation
 end

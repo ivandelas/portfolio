@@ -33,7 +33,7 @@ FactoryBot.define do
           Faker::Address.country
         ].join(', ')
       else
-        'My house, next to the gas station, grooves street'
+        'My house next to the gas station grooves street come now!'
       end
     end
   end
