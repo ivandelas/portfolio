@@ -8,8 +8,8 @@ FactoryBot.define do
 
     name { valid ? 'John Doe' : '' }
     email { valid ? 'john.doe@example.org' : 'john.doe#hey' }
-    github { valid ? 'github.com/john-doe' : 'google-net_great 32' }
-    linkedin { valid ? 'www.linkedin.com/in/john-doe' : 'nice_thing#23@ex' }
+    github { valid ? 'https://github.com/john-doe' : 'google-net_great 32' }
+    linkedin { valid ? 'https://www.linkedin.com/in/john-doe' : 'nice_thing#23@ex' }
     about { valid ? Faker::Lorem.paragraph_by_chars(number: 100) : ('a' * 99) }
   end
 

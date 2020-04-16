@@ -56,4 +56,34 @@ class OwnerTest < ActiveSupport::TestCase
       _(invalid_owner.errors).must_include :email
     end
   end
+
+  describe 'github profile link' do
+    it 'must be a standard valid url' do
+      _(valid_owner.github).must_equal 'https://github.com/john-doe'
+      _(valid_owner).must_be :valid?
+      _(invalid_owner.github).must_equal 'google-net_great 32'
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :github
+    end
+  end
+
+  describe 'linkedin profile link' do
+    it 'must be a standard valid url' do
+      _(valid_owner.linkedin).must_equal 'https://www.linkedin.com/in/john-doe'
+      _(valid_owner).must_be :valid?
+      _(invalid_owner.linkedin).must_equal 'nice_thing#23@ex'
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :linkedin
+    end
+  end
+
+  describe 'about text' do
+    it 'must be of at least 100 characters long' do
+      _(valid_owner.about.length).must_equal 100
+      _(valid_owner).must_be :valid?
+      _(invalid_owner.about.length).must_equal 99
+      _(invalid_owner).must_be :invalid?
+      _(invalid_owner.errors).must_include :about
+    end
+  end
 end
