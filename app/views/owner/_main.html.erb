@@ -1,5 +1,5 @@
 <aside class="column">
-  <%= image_tag 'profile', class: 'ui rounded bordered centered medium image' %>
+  <%= image_tag url_for(@owner.profile_image), class: 'ui rounded bordered centered medium image' %>
   <h1 class="ui center aligned header" id="main-header"><%= @owner.name %></h1>
   <%= simple_format(@owner.about, id: 'lead-paragraph') %>
   <%= render partial: 'owner/contact_links' %>

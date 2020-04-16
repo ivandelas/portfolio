@@ -34,4 +34,6 @@ class Owner < ApplicationRecord
   validates :about, length: { minimum: 100 }
   validates :location, format: { with: LOCATION_REGEX }
   validates_with OnlyOneValidation
+
+  has_one_attached :profile_image
 end
