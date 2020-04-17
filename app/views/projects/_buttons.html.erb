@@ -1,5 +1,5 @@
 <div class="ui buttons">
   <%= link_to 'Edit', edit_project_path(project), class: 'ui button' %>
   <div class="or"></div>
-  <%= link_to 'Delete', project_path(project), method: :delete, class: 'ui red button' %>
+  <%= link_to 'Delete', project_path(project), method: :delete, class: 'ui red button', remote: true, data: { confirm: 'Are you sure?' } %>
 </div>

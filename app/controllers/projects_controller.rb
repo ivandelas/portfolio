@@ -1,17 +1,9 @@
 class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
-
-    respond_to do |format|
-      if @project.destroy
-        flash[:success] = 'Project deleted'
-        format.html { redirect_to projects_url }
-        format.js
-      else
-        flash.now[:error] = 'Project not deleted'
-        format.html { render action: 'index' }
-      end
-    end
+    @project.destroy
+    flash.now[:success] = 'Project deleted'
+    respond_to :js
   end
 
   def update

@@ -1,1 +1,26 @@
-$('#project-<%= @project.id %>').remove();
+document.getElementById('project-<%= @project.id %>')
+  .parentNode
+  .removeChild(document.getElementById('project-<%= @project.id %>'))
+
+document.getElementById('flash-messages').innerHTML =
+  '<%= j render 'layouts/messages' %>'
+
+for (let i = 0; i < document.querySelectorAll('.message .close').length; i++) {
+  document.querySelectorAll('.message .close')[i]
+    .addEventListener('click', (e) => {
+      const elem = e.target.parentNode
+
+      fadeEffect = setInterval(() => {
+        if (!elem.style.opacity) {
+          elem.style.opacity = 1
+        }
+
+        if (elem.style.opacity > 0) {
+          elem.style.opacity -= 0.05
+        } else {
+          clearInterval(fadeEffect)
+          elem.parentNode.removeChild(elem)
+        }
+      }, 8)
+    })
+}

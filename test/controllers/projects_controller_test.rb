@@ -54,7 +54,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     project.save
 
     assert_difference('Project.count', -1) do
-      delete project_path(project)
+      delete project_path(project), xhr: true
     end
   end
 end
