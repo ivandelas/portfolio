@@ -36,6 +36,26 @@ FactoryBot.define do
         'My house next to the gas station grooves street come now!'
       end
     end
+
+    before(:create, :build) do |owner|
+      until owner.valid?
+        owner.location = [
+          Faker::Address.city,
+          Faker::Address.state,
+          Faker::Address.country
+        ].join(', ')
+      end
+    end
+
+    after(:create, :build) do |owner|
+      owner.profile_image.attach(
+        io: File.open(Rails.root.join(
+          'app', 'assets', 'images', 'profile.png')),
+
+        filename: 'profile.png',
+        content_type: 'image/png'
+      )
+    end
   end
 
   sequence(:title) { |n| "project title #{n}" }

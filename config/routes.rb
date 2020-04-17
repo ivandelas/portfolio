@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'mastermind#base'
-  resources :owner, only: [:new, :create]
-  post 'owners', to: 'owner#create'
-  get 'owners', to: 'mastermind#base'
+  get 'owner/new', to: 'owner#new', as: 'new_owner'
+  post 'owner', to: 'owner#create'
+  get 'owner', to: 'mastermind#base'
+  resources :projects, except: :index
 end

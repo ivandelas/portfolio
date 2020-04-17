@@ -20,24 +20,6 @@ class OwnerTest < ActiveSupport::TestCase
       invalid_owner.name = 'Jen'
       _(invalid_owner).must_be :invalid?
       _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'Jo Aj'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-    end
-
-    it 'must have each word capitalized' do
-      invalid_owner.name = 'joe Doe'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'Joe dOe'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'Joe DOE'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
-      invalid_owner.name = 'joe doe'
-      _(invalid_owner).must_be :invalid?
-      _(invalid_owner.errors).must_include :name
     end
   end
 

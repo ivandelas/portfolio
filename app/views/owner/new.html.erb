@@ -8,7 +8,9 @@
     <%= render partial: 'errors' %>
   </div>
   <div class="sixteen wide column">
-    <%= form_with(model: @owner, local: true, class: 'ui form') do |f| %>
+    <%= form_with(
+      model: @owner, url: owner_path, local: true, class: 'ui form'
+    ) do |f| %>
       <div class="equal width fields">
         <div class="field">
           <%= f.label :name, 'Name' %>
