@@ -33,6 +33,7 @@ owner = Owner.new(
 )
 
 until owner.valid?
+  puts "OWNER LOCATION: #{owner.location}"
   owner.location = [
     Faker::Address.city,
     Faker::Address.state,

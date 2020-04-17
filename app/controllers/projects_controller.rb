@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+  def index
+    @projects = Owner.first.projects
+  end
+
   def new
     @project = Project.new
   end

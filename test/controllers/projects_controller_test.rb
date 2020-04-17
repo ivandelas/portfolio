@@ -15,4 +15,10 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
         project: attributes_for(:project, attach_image: false) }
     end
   end
+
+  def test_it_gets_index
+    create(:owner)
+    get projects_url
+    assert_response :success
+  end
 end

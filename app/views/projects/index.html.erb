@@ -1,0 +1,11 @@
+<div class="ui container grid">
+  <div class="sixteen wide column">
+    <h1 class="ui aligned center header">Manage your projects from here</h1>
+  </div>
+  <div class="sixteen wide column">
+    <div class="ui two column stackable grid">
+      <%= render partial: 'project', collection: @projects,
+        locals: { columns: true } %>
+    </div>
+  </div>
+</div>
