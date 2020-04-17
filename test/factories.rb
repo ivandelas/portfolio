@@ -27,23 +27,9 @@ FactoryBot.define do
 
     location do
       if valid
-        [
-          Faker::Address.city,
-          Faker::Address.state,
-          Faker::Address.country
-        ].join(', ')
+        'Caracas, Capital District, Venezuela'
       else
         'My house next to the gas station grooves street come now!'
-      end
-    end
-
-    before(:create, :build) do |owner|
-      until owner.valid?
-        owner.location = [
-          Faker::Address.city,
-          Faker::Address.state,
-          Faker::Address.country
-        ].join(', ')
       end
     end
 
@@ -61,20 +47,25 @@ FactoryBot.define do
   sequence(:title) { |n| "project title #{n}" }
   sequence(:site) { |n| "https://site-url-#{n}.herokuapp.com" }
   sequence(:repo) { |n| "https://github.com/user/repo#{n}" }
-  sequence(:img) { |n| "image#{n}.jpg" }
 
   factory :project do
+    transient do
+      attach_image { true }
+    end
+
     title { generate(:title) }
-    description { 'smap' * 13 }
+    description { 'spam' * 13 }
     site { generate(:site) }
     repo { generate(:repo) }
 
-    after(:build, :create) do |project|
-      project.demo_image.attach(
-        io: File.open('app/assets/images/placeholder.jpg'),
-        filename: 'placeholder.jpg',
-        content_type: 'image/jpeg'
-      )
+    after(:build, :create) do |project, evaluator|
+      if evaluator.attach_image
+        project.demo_image.attach(
+          io: File.open('app/assets/images/placeholder.jpg'),
+          filename: 'placeholder.jpg',
+          content_type: 'image/jpeg'
+        )
+      end
     end
   end
 end

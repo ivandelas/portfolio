@@ -12,7 +12,7 @@ Owner.all.each do |owner|
   owner.destroy
 end
 
-owner = Owner.create(
+owner = Owner.new(
   name: Faker::Name.first_name + ' ' + Faker::Name.last_name,
   email: Faker::Internet.email,
   about: Faker::Lorem.paragraph_by_chars(number: 200),
@@ -32,11 +32,21 @@ owner = Owner.create(
   ].join(', ')
 )
 
+until owner.valid?
+  owner.location = [
+    Faker::Address.city,
+    Faker::Address.state,
+    Faker::Address.country,
+  ].join(', ')
+end
+
 owner.profile_image.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'profile.png')),
   filename: 'profile.png',
   content_type: 'image/png'
 )
+
+owner.save
 
 10.times do
   project = owner.projects.build(
