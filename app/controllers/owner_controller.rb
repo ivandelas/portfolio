@@ -7,6 +7,18 @@ class OwnerController < ApplicationController
     @owner = Owner.new(owner_params)
 
     if @owner.save
+      @owner.profile_image.attach(owner_params[:profile_image])
+
+      unless @owner.profile_image.attached?
+        @owner.profile_image.attach(
+          io: File.open(
+            Rails.root.join('app', 'assets', 'images', 'profile.png')),
+
+          filename: 'profile.png',
+          content_type: 'image/png'
+        )
+      end
+
       flash[:success] = 'You are ready to rock!'
       redirect_to root_url
     else
@@ -22,9 +34,9 @@ class OwnerController < ApplicationController
       :email,
       :location,
       :about,
-      :profile_image,
       :github,
-      :linkedin
+      :linkedin,
+      :profile_image
     )
   end
 end

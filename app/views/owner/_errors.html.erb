@@ -1,0 +1,13 @@
+<% if @owner.errors.any? %>
+  <div class="ui error message">
+    <i class="close icon"></i>
+    <div class="header">
+      You have <%= pluralize(@owner.errors.count, 'error') %>
+    </div>
+    <ul class="list">
+      <% @owner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
