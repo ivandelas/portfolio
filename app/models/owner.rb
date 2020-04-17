@@ -11,7 +11,7 @@ end
 class Owner < ApplicationRecord
   has_many :projects, dependent: :destroy
 
-  NAME_REGEX = /\A[A-Z][a-z]+{1,}\s[A-Z][a-z]{2,}\z/
+  NAME_REGEX = /\A[[:alpha:]]+{1,}\s[[:alpha:]]{2,}\z/
   GITHUB_PROFILE_REGEX = /\Ahttps?:\/\/github\.com\/[A-Za-z\-_]+[^\-_]\z/
 
   LOCATION_REGEX = /
