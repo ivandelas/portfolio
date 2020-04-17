@@ -4,8 +4,7 @@
   </div>
   <div class="sixteen wide column">
     <div class="ui two column stackable grid">
-      <%= render partial: 'project', collection: @projects,
-        locals: { columns: true } %>
+      <%= render_projects @projects %>
     </div>
   </div>
 </div>

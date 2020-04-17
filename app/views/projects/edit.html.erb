@@ -1,13 +1,14 @@
+
 <main class="ui container grid">
   <div class="sixteen wide column">
     <h1 class="ui aligned center header">
-      This form will yield a new project!
+      Some new ideas for this project?
     </h1>
   </div>
   <div class="sixteen wide column">
     <%= render partial: 'shared/errors', locals: { object: @project } %>
   </div>
   <div class="sixteen wide column">
-    <%= render partial: 'form', locals: { update: false } %>
+    <%= render partial: 'form', locals: { update: true } %>
   </div>
 </main>

@@ -1,4 +1,39 @@
 class ProjectsController < ApplicationController
+  def destroy
+    @project = Project.find(params[:id])
+
+    respond_to do |format|
+      if @project.destroy
+        flash[:success] = 'Project deleted'
+        format.html { redirect_to projects_url }
+        format.js
+      else
+        flash.now[:error] = 'Project not deleted'
+        format.html { render action: 'index' }
+      end
+    end
+  end
+
+  def update
+    @project = Project.find(params[:id])
+
+    if @project.update(project_params)
+      if project_params[:demo_image]
+        @project.demo_image.purge
+        @project.demo_image.attach(project_params[:demo_image])
+      end
+
+      flash[:success] = 'Project updated'
+      redirect_to projects_url
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @project = Project.find(params[:id])
+  end
+
   def index
     @projects = Owner.first.projects
   end
@@ -18,8 +53,8 @@ class ProjectsController < ApplicationController
           io: File.open(Rails.root.join(
             'app', 'assets', 'images', 'placeholder.jpg')),
 
-          filename: 'placeholder.jpg',
-          content_type: 'image/jpeg'
+           filename: 'placeholder.jpg',
+           content_type: 'image/jpeg'
         )
       end
 

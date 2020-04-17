@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <div class="ui one column container grid" id="flash-messages">
+      <div class="column">
+        <%= render 'layouts/messages' %>
+      </div>
+    </div>
     <div class="ui stackable two column grid container">
       <%= yield %>
     </div>
