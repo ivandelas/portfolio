@@ -16,8 +16,28 @@ require("semantic-ui-sass")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-jQuery(window).on('load', function () {
+function attachFlashEvents() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+}
+
+$(window).on('load', function () {
+  attachFlashEvents()
+
+  $('.delete-btn').on('click', function (e) {
+    const url = $(e.target).data('url')
+
+    $('.ui.mini.modal').modal('show')
+
+    $('.ui.mini.modal .ok.button').on('click', function (e) {
+      $.ajax({
+        type: 'DELETE',
+        url: url
+      }).done(function () {
+        attachFlashEvents()
+      })
+    })
+  })
+
 });
