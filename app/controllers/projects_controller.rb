@@ -1,4 +1,12 @@
 class ProjectsController < ApplicationController
+  def toggle_active
+    @project = Project.find(params[:id])
+    msg = @project.active? ? 'Project deactivated' : 'Project activated'
+    @project.toggle!(:active)
+    flash.now[:info] = msg
+    respond_to :js
+  end
+
   def destroy
     @project = Project.find(params[:id])
     @project.destroy

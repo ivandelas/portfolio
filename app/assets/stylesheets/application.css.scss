@@ -24,28 +24,21 @@
 
 
 body {
-  padding-top: 3rem;
   min-height: 100vh;
 
   footer {
     &.ui.padded.grid:not(.vertically):not(.horizontally) {
       margin-top: 3rem !important;
     }
+
+    code {
+      color: black !important;
+    }
   }
 }
 
 a {
   &:hover {
-    text-decoration: underline;
-  }
-}
-
-code a {
-  color: #000;
-  font-weight: bold;
-
-  &:hover {
-    color: #000;
     text-decoration: underline;
   }
 }
@@ -58,6 +51,10 @@ p {
   color: black !important;
 }
 
+.text.white {
+  color: white !important;
+}
+
 h1, h2, h3 {
   font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
 }
@@ -66,4 +63,17 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.audacious {
+  font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+}
+
+.centered-content-vertical {
+  display: flex !important;
+  align-items: center;
+
+  & > div {
+    flex-grow: 1;
+  }
 }

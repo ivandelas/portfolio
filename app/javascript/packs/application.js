@@ -22,7 +22,7 @@ function attachFlashEvents() {
   });
 }
 
-$(window).on('load', function () {
+$(document).on('turbolinks:load', function () {
   attachFlashEvents()
 
   $('.delete-btn').on('click', function (e) {
@@ -40,4 +40,23 @@ $(window).on('load', function () {
     })
   })
 
+  $('.ui.dropdown').dropdown()
+
+  $('.toggle.button').on('click', function (e) {
+    const url = $(e.target).data('url')
+
+    $.ajax({
+      type: 'PUT',
+      url: url
+    }).done(function () {
+      attachFlashEvents()
+      $(e.target).toggleClass('active')
+
+      if ($(e.target).hasClass('active')) {
+        $(e.target).text('Active')
+      } else {
+        $(e.target).text('Inactive')
+      }
+    })
+  })
 });

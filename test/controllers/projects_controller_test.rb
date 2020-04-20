@@ -57,4 +57,14 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
       delete project_path(project), xhr: true
     end
   end
+
+  def test_it_toggles_active_status_of_project
+    owner = create(:owner)
+    project = build(:project)
+    project.owner_id = owner.id
+    project.save
+
+    put change_active_status_url(project), xhr: true
+    assert project.reload.active?
+  end
 end

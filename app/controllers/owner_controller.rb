@@ -1,4 +1,24 @@
 class OwnerController < ApplicationController
+  before_action :set_owner, only: [:edit, :update]
+
+  def edit
+  end
+
+  def update
+    if @owner.update(owner_params)
+      if owner_params[:profile_image]
+        @owner.profile_image.purge
+        @owner.profile_image.attach(owner_params[:profile_image])
+      end
+
+      flash[:success] = 'Your profile has been updated'
+    else
+      flash[:error] = 'Your profile could not be updated'
+    end
+
+    redirect_to root_url
+  end
+
   def new
     @owner = Owner.new
   end
@@ -27,6 +47,13 @@ class OwnerController < ApplicationController
   end
 
   private
+
+  def set_owner
+    unless @owner = Owner.first
+      flash[:error] = 'There is no owner for the application'
+      redirect_to new_owner_url
+    end
+  end
 
   def owner_params
     params.require(:owner).permit(
