@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_210413) do
+ActiveRecord::Schema.define(version: 2020_04_21_195444) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_04_16_210413) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
+    t.string "password_digest"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_04_16_210413) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "active", default: false
-    t.bigint "owner_id"
+    t.integer "owner_id"
     t.index ["owner_id"], name: "index_projects_on_owner_id"
   end
 

@@ -23,26 +23,16 @@ owner = Owner.new(
     host: 'github.com', scheme: 'https'
   ).sub(/\.\w+\z/, ''),
 
-  linkedin: Faker::Internet.url(
-    host: 'www.linkedin.com/in', scheme: 'https'
-  ).sub(/\.\w+\z/, ''),
+  linkedin: 'https://www.linkedin.com/in/perez-juanito-23',
 
   location: [
     Faker::Address.city,
     Faker::Address.state,
     Faker::Address.country,
-  ].join(', ')
-)
+  ].join(', '),
 
-until owner.valid?
-  puts "OWNER LOCATION: #{owner.location}"
-  owner.location = [
-    Faker::Address.city,
-    Faker::Address.state,
-    Faker::Address.country,
-  ].join(', ')
-  puts "OWNER ERRORS: #{owner.errors.full_messages.inspect}"
-end
+  password: 'is classified'
+)
 
 owner.profile_image.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'profile.png')),

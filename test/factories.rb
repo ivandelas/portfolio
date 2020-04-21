@@ -33,6 +33,8 @@ FactoryBot.define do
       end
     end
 
+    password { '123456' }
+
     after(:create, :build) do |owner|
       owner.profile_image.attach(
         io: File.open(Rails.root.join(

@@ -37,5 +37,9 @@
         placeholder: 'https://www.linkedin.com/in/john-doe-1923' %>
     </div>
   </div>
-  <%= f.submit(update ? 'Change' : 'Begin', class: 'ui red button') %>
+  <% if update %>
+    <%= f.submit 'Update', class: 'ui primary button' %>
+  <% else %>
+    <%= f.submit 'Create', class: 'ui success button' %>
+  <% end %>
 <% end %>

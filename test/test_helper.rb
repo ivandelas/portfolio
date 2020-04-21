@@ -12,4 +12,9 @@ class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
 
   # Add more helper methods to be used by all tests here...
+  def login_owner(owner)
+    post login_url, params: {
+      session: { email: owner.email, password: '123456' }
+    }
+  end
 end

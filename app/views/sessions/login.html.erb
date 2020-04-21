@@ -1,0 +1,27 @@
+<div class="ui centered container grid">
+  <div class="three column stackable row">
+    <h1 class="ui aligned center header">Provide login credentials</h1>
+  </div>
+  <div class="three column stackable row">
+    <div class="column">
+      <div class="ui segment">
+        <%= form_with(scope: :session, url: login_url, local: true, class: 'ui form', id: 'login-form') do |f| %>
+          <div class="field">
+            <%= f.label :email, 'Email' %>
+            <%= f.email_field :email, placeholder: 'joh@doe.net' %>
+          </div>
+          <div class="field">
+            <%= f.label :password, 'Password' %>
+            <%= f.password_field :password %>
+          </div>
+          <%= f.submit 'Login', class: 'ui success button' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="one column row">
+    <div class="ui stacked segment">
+      <%= link_to 'Go back', root_url %>
+    </div>
+  </div>
+</div>

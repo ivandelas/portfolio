@@ -26,5 +26,9 @@
         placeholder: 'https://amazing-name.tech' %>
     </div>
   </div>
-  <%= f.submit "#{update ? 'Update' : 'Create'}", class: 'ui red button' %>
+  <% if update %>
+    <%= f.submit 'Update', class: 'ui primary button' %>
+  <% else %>
+    <%= f.submit 'Create', class: 'ui positive button' %>
+  <% end %>
 <% end %>

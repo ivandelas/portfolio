@@ -1,4 +1,5 @@
 class OwnerController < ApplicationController
+  before_action :ensure_owner_logged_in, only: [:edit, :update]
   before_action :set_owner, only: [:edit, :update]
 
   def edit
@@ -59,6 +60,7 @@ class OwnerController < ApplicationController
     params.require(:owner).permit(
       :name,
       :email,
+      :password,
       :location,
       :about,
       :github,

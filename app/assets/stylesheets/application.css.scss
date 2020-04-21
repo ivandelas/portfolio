@@ -24,11 +24,13 @@
 
 
 body {
-  min-height: 100vh;
+  background-image: asset-url('background.jpg');
+  background-size: cover;
+  background-position: center center;
 
   footer {
     &.ui.padded.grid:not(.vertically):not(.horizontally) {
-      margin-top: 3rem !important;
+      margin-top: 2rem !important;
     }
 
     code {
@@ -76,4 +78,12 @@ h1, h2, h3 {
   & > div {
     flex-grow: 1;
   }
+}
+
+.d-none {
+  display: none !important;
+}
+
+#main-content {
+  min-height: 100vh;
 }

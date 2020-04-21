@@ -11,6 +11,11 @@ Rails.application.routes.draw do
 
   # projects
   resources :projects
-  put 'projects/(:id)/toggle(.:format)', to: 'projects#toggle_active',
+  patch 'projects/(:id)/toggle(.:format)', to: 'projects#toggle_active',
     as: 'change_active_status'
+
+  # sessions
+  get 'login', to: 'sessions#login'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end

@@ -35,4 +35,6 @@ class Owner < ApplicationRecord
   validates_with OnlyOneValidation
 
   has_one_attached :profile_image
+
+  has_secure_password
 end

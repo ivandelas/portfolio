@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :ensure_owner_logged_in
+
   def toggle_active
     @project = Project.find(params[:id])
     msg = @project.active? ? 'Project deactivated' : 'Project activated'

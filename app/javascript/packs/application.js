@@ -46,7 +46,7 @@ $(document).on('turbolinks:load', function () {
     const url = $(e.target).data('url')
 
     $.ajax({
-      type: 'PUT',
+      type: 'PATCH',
       url: url
     }).done(function () {
       attachFlashEvents()
