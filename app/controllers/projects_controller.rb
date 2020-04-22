@@ -21,8 +21,10 @@ class ProjectsController < ApplicationController
 
     if @project.update(project_params)
       if project_params[:demo_image]
-        @project.demo_image.purge
-        @project.demo_image.attach(project_params[:demo_image])
+        Project.transaction do
+          @project.demo_image.purge
+          @project.demo_image.attach(project_params[:demo_image])
+        end
       end
 
       flash[:success] = 'Project updated'

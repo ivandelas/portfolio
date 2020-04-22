@@ -1,4 +1,23 @@
 module ApplicationHelper
+  def render_loading_dimmer
+    if owner_logged_in?
+      if ['projects', 'owner'].include?(controller.controller_name)
+        if ['new', 'edit'].include?(controller.action_name)
+          return %{
+            <div id="all-window">
+              <div class="ui dimmer">
+                <div class="ui indeterminate text loader">Processing the data provided</div>
+              </div>
+            </div>
+            #{javascript_pack_tag 'loader'}
+          }.html_safe
+        end
+      end
+    end
+
+    nil
+  end
+
   def render_curiosity
     unless owner_logged_in? || controller.controller_name != 'mastermind'
       return %{

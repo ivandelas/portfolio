@@ -8,8 +8,10 @@ class OwnerController < ApplicationController
   def update
     if @owner.update(owner_params)
       if owner_params[:profile_image]
-        @owner.profile_image.purge
-        @owner.profile_image.attach(owner_params[:profile_image])
+        Owner.transaction do
+          @owner.profile_image.purge
+          @owner.profile_image.attach(owner_params[:profile_image])
+        end
       end
 
       flash[:success] = 'Your profile has been updated'
