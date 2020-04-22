@@ -26,14 +26,25 @@
     </div>
   </div>
   <div class="equal width fields">
-    <div class="field">
-      <%= f.label :password, 'Password (leave empty if you don\'t want to change it)' %>
-      <%= f.password_field :password %>
-    </div>
-    <div class="field">
-      <%= f.label :password_confirmation, 'Password Confirmation (should be empty if the password is empty)' %>
-      <%= f.password_field :password_confirmation %>
-    </div>
+    <% if update %>
+      <div class="field">
+        <%= f.label :password, 'Password (leave empty if you don\'t want to change it)' %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Password Confirmation (should be empty if the password is empty)' %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    <% else %>
+      <div class="field">
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Password Confirmation' %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    <% end %>
   </div>
   <div class="equal width fields">
     <div class="field">
