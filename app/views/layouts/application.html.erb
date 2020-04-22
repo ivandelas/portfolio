@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	</head>
+
+  <body>
+    <%= render_if_owner_logged('layouts/navigation') %>
+    <div class="ui stackable grid" id="main-content">
+      <div class="sixteen wide column" id="flash-messages">
+        <%= render 'layouts/messages' %>
+      </div>
+      <div class="sixteen wide column">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render_if_owner_logged('layouts/footer') %>
+    <%= render_loading_dimmer %>
+  </body>
+</html>

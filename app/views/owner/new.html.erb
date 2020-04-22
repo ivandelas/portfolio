@@ -1,0 +1,13 @@
+<main class="ui container grid">
+  <div class="sixteen wide column">
+    <h1 class="ui aligned center header">
+      Turn on the machine!
+    </h1>
+  </div>
+  <div class="sixteen wide column">
+    <%= render partial: 'shared/errors', locals: { object: @owner } %>
+  </div>
+  <div class="sixteen wide column">
+    <%= render partial: 'form', locals: { update: false } %>
+  </div>
+</main>

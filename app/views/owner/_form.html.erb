@@ -1,0 +1,66 @@
+<%= form_with(model: @owner, url: owner_path, local: true, class: 'ui form') do |f| %>
+  <div class="equal width fields">
+    <div class="field">
+      <%= f.label :name, 'Name' %>
+      <%= f.text_field :name, placeholder: 'John Doe' %>
+    </div>
+    <div class="field">
+      <%= f.label :location, 'Location' %>
+
+      <%= f.text_field :location,
+        placeholder: 'Caracas, Capital District, Venezuela' %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :about, 'Introductory text' %>
+    <%= f.text_area :about %>
+  </div>
+  <div class="equal width fields">
+    <div class="field">
+      <%= f.label :profile_image, 'Profile picture' %>
+      <%= f.file_field :profile_image %>
+    </div>
+    <div class="field">
+      <%= f.label :email, 'Email' %>
+      <%= f.email_field :email, placeholder: 'john.doe@example.net' %>
+    </div>
+  </div>
+  <div class="equal width fields">
+    <% if update %>
+      <div class="field">
+        <%= f.label :password, 'Password (leave empty if you don\'t want to change it)' %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Password Confirmation (should be empty if the password is empty)' %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    <% else %>
+      <div class="field">
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, 'Password Confirmation' %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    <% end %>
+  </div>
+  <div class="equal width fields">
+    <div class="field">
+      <%= f.label :github, 'Github profile link' %>
+      <%= f.url_field :github, placeholder: 'https://github.com/john-doe' %>
+    </div>
+    <div class="field">
+      <%= f.label :linkedin, 'LinkedIn profile link' %>
+
+      <%= f.url_field :linkedin,
+        placeholder: 'https://www.linkedin.com/in/john-doe-1923' %>
+    </div>
+  </div>
+  <% if update %>
+    <%= f.submit 'Update', class: 'ui primary button' %>
+  <% else %>
+    <%= f.submit 'Create', class: 'ui positive button' %>
+  <% end %>
+<% end %>

@@ -1,0 +1,26 @@
+<div class="ui list">
+  <div class="item">
+    <i class="marker icon"></i>
+    <div class="content">
+      <%= @owner.location %>
+    </div>
+  </div>
+  <div class="item">
+    <i class="mail icon"></i>
+    <div class="content">
+      <%= link_to @owner.email, "mailto:#{@owner.email}", target: '_blank' %>
+    </div>
+  </div>
+  <div class="item">
+    <i class="linkify icon"></i>
+    <div class="content">
+      <%= link_to 'github profile', @owner.github, target: '_blank' %>
+    </div>
+  </div>
+  <div class="item">
+    <i class="linkify icon"></i>
+    <div class="content">
+      <%= link_to 'linkedin profile', @owner.linkedin, target: '_blank' %>
+    </div>
+  </div>
+</div>

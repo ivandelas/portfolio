@@ -1,0 +1,9 @@
+<div class="ui buttons">
+  <%= link_to 'Edit', edit_project_path(project), class: 'ui primary button' %>
+  <button type="button" class="ui red button delete-btn" data-project-id="<%= project.id %>" data-url="<%= url_for(project_url(project)) %>">Delete</button>
+</div>
+<% if project.active? %>
+  <button type="button" class="ui compact right floated toggle active button" data-url="<%= url_for(change_active_status_url(project)) %>">Active</button>
+<% else %>
+  <button type="button" class="ui compact right floated toggle button" data-url="<%= url_for(change_active_status_url(project)) %>">Inactive</button>
+<% end %>
