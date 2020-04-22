@@ -27,6 +27,16 @@
   </div>
   <div class="equal width fields">
     <div class="field">
+      <%= f.label :password, 'Password (leave empty if you don\'t want to change it)' %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation, 'Password Confirmation (should be empty if the password is empty)' %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
+  <div class="equal width fields">
+    <div class="field">
       <%= f.label :github, 'Github profile link' %>
       <%= f.url_field :github, placeholder: 'https://github.com/john-doe' %>
     </div>
@@ -40,6 +50,6 @@
   <% if update %>
     <%= f.submit 'Update', class: 'ui primary button' %>
   <% else %>
-    <%= f.submit 'Create', class: 'ui success button' %>
+    <%= f.submit 'Create', class: 'ui positive button' %>
   <% end %>
 <% end %>

@@ -15,11 +15,11 @@ class OwnerController < ApplicationController
       end
 
       flash[:success] = 'Your profile has been updated'
+      redirect_to root_url
     else
-      flash[:error] = 'Your profile could not be updated'
+      render :edit
     end
 
-    redirect_to root_url
   end
 
   def new
@@ -42,6 +42,7 @@ class OwnerController < ApplicationController
         )
       end
 
+      session[:owner_id] = @owner.id
       flash[:success] = 'You are ready to rock!'
       redirect_to root_url
     else
@@ -63,6 +64,7 @@ class OwnerController < ApplicationController
       :name,
       :email,
       :password,
+      :password_confirmation,
       :location,
       :about,
       :github,

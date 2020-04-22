@@ -1,24 +1,19 @@
-# README
+# portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails (6) application for managing a developer portfolio,
+you are the owner, you manage your contact information and your projects. You
+must login to change things, and when you are done you just logout, everything
+is just joy and hapinness.
 
-Things you may want to cover:
+Actually, I just wanted to practice with Ruby on Rails.
 
-* Ruby version
+![portfolio demo gif](./doc/demo.gif)
 
-* System dependencies
+## Setup
 
-* Configuration
+### Requirements
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- rails 6.0.2.2
+- ruby 2.6.5
+- sqlite3 3.31.1
+- yarn 1.22.4

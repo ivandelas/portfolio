@@ -7,8 +7,16 @@ class Project < ApplicationRecord
     uniqueness: { case_sensitive: false }
 
   validates :description, length: { minimum: 50, maximum: 300 }
-  validates :site, :repo, format: { with: URI.regexp }
-  validates :repo, format: { with: /\A.*\/[A-Za-z0-9\-]+\/[a-z0-9\-\._]+\z/ }
+
+  validates :site, :repo, format: {
+    with: URI.regexp,
+    message: 'A valid URL is expected'
+  }
+
+  validates :repo, format: {
+    with: /\A.*\/[A-Za-z0-9\-]+\/[a-z0-9\-\._]+\z/,
+    message: 'A valid repository url is expected'
+  }
 
   scope :active_projects, -> { where(active: true) }
 
