@@ -1,0 +1,15 @@
+<% if flash.any? %>
+  <div class="ui three column padded centered stackable grid">
+    <div class="column">
+      <% flash.each do |key, msg| %>
+        <div class="ui <%= key %> message">
+          <i class="close icon"></i>
+          <div class="header">
+            <%= key %>
+          </div>
+          <p><%= msg %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

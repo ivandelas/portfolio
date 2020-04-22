@@ -1,0 +1,28 @@
+<div class="ui centered container grid">
+  <div class="sixteen wide column">
+    <h1 class="ui aligned center header">Manage your projects from here</h1>
+  </div>
+  <div class="sixteen wide column">
+    <div class="ui two column stackable grid">
+      <%= render_projects @projects %>
+    </div>
+  </div>
+</div>
+<div class="ui mini modal">
+  <div class="ui header">
+    <h3>Deleting project</h3>
+  </div>
+  <div class="content">
+    <p>Are you sure about deleting this project?</p>
+  </div>
+  <div class="actions">
+    <div class="ui cancel negative button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div class="ui ok positive button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>

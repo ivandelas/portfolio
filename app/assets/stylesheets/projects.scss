@@ -1,0 +1,17 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#projects-box {
+  max-height: 85vh;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-image: asset-url('projects_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#lead-paragraph {
+  font-size: 1.3rem;
+}

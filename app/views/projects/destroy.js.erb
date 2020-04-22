@@ -1,0 +1,6 @@
+document.getElementById('project-<%= @project.id %>')
+  .parentNode
+  .removeChild(document.getElementById('project-<%= @project.id %>'))
+
+document.getElementById('flash-messages').innerHTML =
+  '<%= j render('layouts/messages') %>'

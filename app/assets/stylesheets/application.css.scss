@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_tree .
+ *= require_self
+ */
+
+@import "semantic-ui";
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: font-url('PermanentMarker-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+body {
+  background-image: asset-url('background.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  footer {
+    &.ui.padded.grid:not(.vertically):not(.horizontally) {
+      margin-top: 2rem !important;
+    }
+
+    code {
+      color: black !important;
+    }
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  overflow: auto;
+}
+
+.text.black {
+  color: black !important;
+}
+
+.text.white {
+  color: white !important;
+}
+
+h1, h2, h3 {
+  font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+}
+
+#footer-header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audacious {
+  font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+}
+
+.centered-content-vertical {
+  display: flex !important;
+  align-items: center;
+
+  & > div {
+    flex-grow: 1;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+#main-content {
+  min-height: 100vh;
+}
+
+#all-window {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}

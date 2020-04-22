@@ -1,0 +1,34 @@
+<%= form_with(model: @project, local: true, class: 'ui form') do |f| %>
+  <div class="equal width fields">
+    <div class="field">
+      <%= f.label :title, 'Title' %>
+      <%= f.text_field :title, placeholder: 'A linter made with Ruby' %>
+    </div>
+    <div class="field">
+      <%= f.label :demo_image, 'Demo image' %>
+      <%= f.file_field :demo_image %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :description, 'Description' %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="equal width fields">
+    <div class="field">
+      <%= f.label :repo, 'Repository link' %>
+      <%= f.url_field :repo,
+        placeholder: 'https://github.com/john-doe/project' %>
+    </div>
+    <div class="field">
+      <%= f.label :site, 'Live version URI' %>
+
+      <%= f.url_field :site,
+        placeholder: 'https://amazing-name.tech' %>
+    </div>
+  </div>
+  <% if update %>
+    <%= f.submit 'Update', class: 'ui primary button' %>
+  <% else %>
+    <%= f.submit 'Create', class: 'ui positive button' %>
+  <% end %>
+<% end %>

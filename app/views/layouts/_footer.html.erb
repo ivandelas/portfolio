@@ -1,0 +1,36 @@
+<footer class="ui three column padded grid<%= logged ? '' : ' d-none' %>">
+  <div
+    class="sixteen wide mobile three wide tablet three wide computer black column"
+    id="footer-header-box">
+    <h2 class="ui center aligned text white header">Feeling curious?</h2>
+  </div>
+  <div class="sixteen wide mobile seven wide tablet seven wide computer black column centered-content-vertical">
+    <div>
+      <p>
+      Do you want to know how this was built? Or how is this working
+      from behind? It may look like a static page, but actually is
+      database backed, is a living portfolio!
+      </p>
+      <p>
+      Here you have a list of hints, they are in order. Probably you
+      will guess how is this portfolio working just by reading
+      the first 2 or something like that.
+      </p>
+    </div>
+  </div>
+  <div class="sixteen wide mobile six wide tablet six wide computer black column">
+    <div class="ui segment">
+      <div class="ui ordered list">
+        <code class="item">Project.active_projects</code>
+        <code class="item">rails active_storage:install</code>
+        <code class="item">User.count == 1 # =&gt; true</code>
+        <code class="item">project.toggle!(:foo)</code>
+        <code class="item">render partial: 'foo', collection: @bars</code>
+        <code class="text white item">
+          <%= link_to 'you.should_look @the_source_code',
+            'https://github.com/santiago-rodrig/portfolio', target: '_blank' %>
+        </code>
+      </div>
+    </div>
+  </div>
+</footer>
