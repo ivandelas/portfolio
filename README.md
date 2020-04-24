@@ -14,7 +14,7 @@ Actually, I just wanted to practice with Ruby on Rails.
 ### Requirements
 
 - rails 6.0.2.2
-- ruby 2.7.1
+- ruby 2.6.5
 - bundler 1.17.2
 - postgresql 12.2
 - yarn 1.22.4
