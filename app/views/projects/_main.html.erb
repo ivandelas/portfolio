@@ -1,8 +1,12 @@
-<main class="column">
-  <h2 class="ui aligned center header">Some of my projects</h2>
-  <div id="projects-box">
-    <div class="ui one column padded centered grid">
-      <%= render_projects @projects %>
+<main class="one column row">
+  <div class="column">
+    <h2 class="ui aligned center header" id="projects-heading">
+      Some of my projects
+    </h2>
+    <div id="projects-box">
+      <div class="ui two column centered padded stackable grid">
+        <%= render_projects @projects %>
+      </div>
     </div>
   </div>
 </main>

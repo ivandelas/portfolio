@@ -1,9 +1,17 @@
-<aside class="column">
-  <%= image_tag url_for(@owner.profile_image), class: 'ui rounded bordered centered medium image' %>
-  <div class="ui raised segment">
-    <h1 class="ui center aligned header" id="main-header"><%= @owner.name %></h1>
-    <%= simple_format(@owner.about, id: 'lead-paragraph') %>
-    <%= render partial: 'owner/contact_links' %>
+<aside class="row">
+  <div class="sixteen wide mobile six wide tablet four wide computer column">
+    <div class="ui stacked segment" id="profile-image">
+      <%= image_tag url_for(@owner.profile_image), class: 'ui rounded bordered image' %>
+    </div>
   </div>
-  <%= render_curiosity %>
+  <div class="sixteen wide mobile ten wide tablet twelve wide computer column">
+    <div class="ui raised segment">
+      <h1 class="ui header" id="main-header">
+        <%= @owner.name %>
+      </h1>
+      <%= simple_format(@owner.about, id: 'lead-paragraph') %>
+      <%= render partial: 'owner/contact_links' %>
+    </div>
+    <%= render_curiosity %>
+  </div>
 </aside>
