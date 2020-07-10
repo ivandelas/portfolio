@@ -36,6 +36,14 @@ module ApplicationHelper
     return render partial: partial, locals: { logged: owner_logged_in? }
   end
 
+  def render_if_owner_not_logged(partial)
+    unless owner_logged_in?
+      return render partial: partial
+    end
+
+    nil
+  end
+
   def render_nav_links
     if controller.controller_name == 'owner'
       return link_to('Preview', root_path, class: 'item audacious'),
