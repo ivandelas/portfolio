@@ -52,6 +52,23 @@ p {
   color: white !important;
 }
 
+#no-logged-footer {
+  background-color: #333;
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#linkedin-badge {
+  margin-bottom: 2rem;
+}
+
+#no-logged-copyright {
+  color: #e8e8e8;
+}
+
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif !important;
 }
