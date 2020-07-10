@@ -14,20 +14,9 @@
  */
 
 @import "semantic-ui";
-
-@font-face {
-  font-family: 'Permanent Marker';
-  src: font-url('PermanentMarker-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-  background-image: asset-url('background.jpg');
-  background-size: cover;
-  background-position: center center;
-
   footer {
     &.ui.padded.grid:not(.vertically):not(.horizontally) {
       margin-top: 2rem !important;
@@ -58,7 +47,7 @@ p {
 }
 
 h1, h2, h3 {
-  font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 #footer-header-box {
@@ -68,7 +57,7 @@ h1, h2, h3 {
 }
 
 .audacious {
-  font-family: 'Permanent Marker', cursive, sans-serif, serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .centered-content-vertical {
