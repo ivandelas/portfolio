@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Portfolio</title>
+		<title>Santiago Rodriguez | Developer</title>
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
 
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <%= favicon_link_tag asset_path('favicon.png') %>
 	</head>
 
   <body>
@@ -22,5 +23,7 @@
     </div>
     <%= render_if_owner_logged('layouts/footer') %>
     <%= render_loading_dimmer %>
+    <%= render_if_owner_not_logged('layouts/no_logged_footer') %>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   </body>
 </html>
