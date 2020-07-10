@@ -1,9 +1,4 @@
 <aside class="row">
-  <div class="sixteen wide mobile six wide tablet four wide computer column">
-    <div class="ui stacked segment" id="profile-image">
-      <%= image_tag url_for(@owner.profile_image), class: 'ui rounded bordered image' %>
-    </div>
-  </div>
   <div class="sixteen wide mobile ten wide tablet twelve wide computer column">
     <div class="ui raised segment">
       <h1 class="ui header" id="main-header">
@@ -13,5 +8,10 @@
       <%= render partial: 'owner/contact_links' %>
     </div>
     <%= render_curiosity %>
+  </div>
+  <div class="sixteen wide mobile six wide tablet four wide computer column">
+    <div class="ui stacked segment" id="profile-image">
+      <%= image_tag url_for(@owner.profile_image), class: 'ui rounded bordered image' %>
+    </div>
   </div>
 </aside>

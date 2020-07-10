@@ -26,6 +26,12 @@ body {
       color: black !important;
     }
   }
+
+  background-color: #e3eeff;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 6rem;    
+  }
 }
 
 a {

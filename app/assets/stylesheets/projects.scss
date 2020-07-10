@@ -10,6 +10,7 @@
   background-image: asset-url('projects_bg.jpg');
   background-size: cover;
   background-position: center center;
+  margin-bottom: 10rem;
 }
 
 #lead-paragraph {
@@ -18,6 +19,9 @@
 
 #projects-heading {
   margin-bottom: 5rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   font-size: 3rem;
+  @media only screen and (min-width: 768px) {
+    margin-top: 3rem;
+  }
 }
