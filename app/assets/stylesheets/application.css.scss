@@ -28,10 +28,6 @@ body {
   }
 
   background-color: #e3eeff;
-
-  @media only screen and (min-width: 768px) {
-    padding-top: 6rem;    
-  }
 }
 
 a {
@@ -97,6 +93,7 @@ h1, h2, h3 {
 }
 
 #main-content {
+  margin-top: 3rem;
   min-height: 100vh;
 }
 
