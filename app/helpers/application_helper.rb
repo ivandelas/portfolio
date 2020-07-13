@@ -16,22 +16,6 @@ module ApplicationHelper
     nil
   end
 
-  def render_curiosity
-    unless owner_logged_in? || controller.controller_name != 'mastermind'
-      return %{
-        <div class="ui stacked segment">
-          #{link_to 'Appearances can be deceiving', login_path}
-        </div>
-      }.html_safe
-    end
-
-    %{
-      <div class="ui stacked segment">
-        #{link_to 'I\'m done with changing things', logout_path, method: :delete}
-      </div>
-    }.html_safe
-  end
-
   def render_if_owner_logged(partial)
     return render partial: partial, locals: { logged: owner_logged_in? }
   end
